@@ -1,0 +1,22 @@
+{
+  "name": "atcoder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sooo-s/AtCoder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sooo-s/AtCoder/issues"
+  },
+  "homepage": "https://github.com/sooo-s/AtCoder#readme",
+  "dependencies": {
+    "atcoder-cli": "^2.0.3"
+  }
+}
