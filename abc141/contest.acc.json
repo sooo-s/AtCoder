@@ -31,7 +31,11 @@
       "id": "abc141_d",
       "label": "D",
       "title": "Powerful Discount Tickets",
-      "url": "https://atcoder.jp/contests/abc141/tasks/abc141_d"
+      "url": "https://atcoder.jp/contests/abc141/tasks/abc141_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
     },
     {
       "id": "abc141_e",
