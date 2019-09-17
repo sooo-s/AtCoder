@@ -2,7 +2,7 @@
 
 ```
 # setup
-./setup.sh
+source ./setup.sh
 
 # start contest
 source ./start.sh
