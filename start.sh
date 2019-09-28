@@ -4,5 +4,5 @@ source .venv/bin/activate
 npx acc login
 npx acc session
 oj login https://atcoder.jp
-oj login --check
+oj login --check https://atcoder.jp
 npx acc check-oj
