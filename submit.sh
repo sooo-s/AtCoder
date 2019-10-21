@@ -1,0 +1,8 @@
+TASK=$1
+FILE=${2:="main.rb"}
+CONTEST_ID=$PWD:t
+TASK_ID=${CONTEST_ID}_${TASK}
+FILE_PATH=${TASK}/${FILE}
+
+npx acc submit -c $CONTEST_ID -t $TASK_ID $FILE_PATH
+
