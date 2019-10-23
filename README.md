@@ -2,9 +2,9 @@
 
 ```
 # setup
-source ./setup.sh
+source ./bin/setup
 # start contest
-source ./start.sh
+source ./bin/start
 npx acc new -c all {contest_id}
 # cd contest dir
 cd {contest_id}
@@ -13,5 +13,5 @@ nvim {task_id}/main.rb
 # test (with vim-quickrun)
 cd {task_id}; oj t -d tests -c 'ruby main.rb'; cd -
 # submit
-source ../submit.sh {task_id}
+source ../bin/submit.sh {task_id}
 ```
