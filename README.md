@@ -13,5 +13,5 @@ nvim {task_id}/main.rb
 # test (with vim-quickrun)
 cd {task_id}; oj t -d tests -c 'ruby main.rb'; cd -
 # submit
-source ../bin/submit.sh {task_id}
+source ../bin/submit {task_id}
 ```
