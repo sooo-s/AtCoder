@@ -1,2 +1,3 @@
 pip install -U online-judge-tools pip
 npm update
+bundle update
