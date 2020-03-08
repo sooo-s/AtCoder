@@ -1,4 +1,27 @@
 ## Ruby
+### input
+```
+n = gets.to_i // 10
+s = gets.chomp.to_s //  "string"
+s = gets.chomp.chars // ["s", "t", "r", "i", "n", "g"]
+n,m = gets.split.map(&:to_i) // n = 10, m = 20
+q.times{ array << gets.to_i } // [1, 2, 3]
+```
+
+### Array
+#### sumがない
+`array.inject(:+)`
+
+### string join
+文字列操作は計算量が悪い
+queueに入れて最後にjoin
+```
+string_queue = ['aaa']
+string_queue.push 'PPP'
+string_queue.unshift 'UUU'
+string.queue.join // 'UUUaaaPPP'
+```
+
 ### Range
 ```
 (1..10)  // 1から10
@@ -6,17 +29,12 @@
 (1..10).to_a // [1, 2, ..., 10]
 ```
 
-### sumがない
-array.inject(:+)
 
-### input
-n = gets.chomp.to_i
-s = gets.chomp.to_s
-s = gets.chomp.chars
-n,m = gets.chomp.split.map(&:to_i)
-s = gets.chomp.split("").map(&:to_s)
-q.times{ a << gets.to_i }
-
-## 
-- 動的計画法
-- 累積和
+## algorithm
+### 全探索
+全部計算する
+### 貪欲法
+各ステップごとに その時点で最も得をする選択をする
+後のことは考えない
+### 動的計画法
+### 累積和
