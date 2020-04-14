@@ -1,8 +1,13 @@
 TASK=$1
-FILE=${2:="main.rb"}
+CONFIRM=$2
+FILE=${3:="main.rb"}
 CONTEST_ID=$PWD:t
 TASK_ID=${CONTEST_ID}_${TASK}
 FILE_PATH=${TASK}/${FILE}
 
-npx acc submit -c $CONTEST_ID -t $TASK_ID $FILE_PATH
+if [ -v CONFIRM ]; then
+  echo $CONFIRM | npx acc submit -c $CONTEST_ID -t $TASK_ID $FILE_PATH
+else
+  npx acc submit -c $CONTEST_ID -t $TASK_ID $FILE_PATH
+fi
 
