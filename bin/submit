@@ -5,7 +5,7 @@ CONTEST_ID=$PWD:t
 TASK_ID=${CONTEST_ID}_${TASK}
 FILE_PATH=${TASK}/${FILE}
 
-if [ -v CONFIRM ]; then
+if [ -n "$CONFIRM" ]; then
   echo $CONFIRM | npx acc submit -c $CONTEST_ID -t $TASK_ID $FILE_PATH
 else
   npx acc submit -c $CONTEST_ID -t $TASK_ID $FILE_PATH
