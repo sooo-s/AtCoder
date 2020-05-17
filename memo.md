@@ -50,3 +50,10 @@ def calc(k)
   return max - min + 1
 end
 ```
+### 幅優先探索 BFS
+ABC168 D
+
+初期値をqueueに入れる
+queueから一つ取り出し探索する
+探索したら結果をqueueに入れる
+繰り返してqueueが空になったら探索終わり
