@@ -9,8 +9,14 @@ q.times{ array << gets.to_i } // [1, 2, 3]
 ```
 
 ### Array
-#### sumがない
-`array.inject(:+)`
+#### sumがない -> sumが使えるようになった
+`array.inject(:+)` -> `array.sum`
+
+#### 初期値nilの配列
+`Array.new(3) # => [nil, nil, nil]`
+
+#### 文字列
+`%w(Ruby Perl Python) # =>["Ruby", "Perl", "Python"]`
 
 ### string join
 文字列操作は計算量が悪い
