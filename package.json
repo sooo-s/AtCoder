@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/sooo-s/AtCoder#readme",
   "dependencies": {
-    "atcoder-cli": "^2.0.5"
+    "atcoder-cli": "^2.1.0"
   }
 }
