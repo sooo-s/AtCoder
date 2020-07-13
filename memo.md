@@ -63,3 +63,24 @@ ABC168 D
 queueから一つ取り出し探索する
 探索したら結果をqueueに入れる
 繰り返してqueueが空になったら探索終わり
+
+### しゃくとり法 O(n^2) -> O(n)
+ABC032 C, ABC038 C, ABC098 D, ARC022 B
+
+left, rightを尺取虫のように動かして計算
+
+長さ nn の数列 a1,a2,…,ana1,a2,…,an において
+「条件」を満たす区間 (連続する部分列) のうち、最小の長さを求めよ
+「条件」を満たす区間 (連続する部分列) のうち、最大の長さを求めよ
+「条件」を満たす区間 (連続する部分列) を数え上げよ
+
+
+### run length
+``
+def rle s
+  s.each_char.inject([]) do |memo, c|
+     memo.last && c == memo.last.last ? memo.last[0] += 1 : memo << [1, c]
+     memo
+  end
+end
+```
