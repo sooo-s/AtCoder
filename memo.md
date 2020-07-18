@@ -84,3 +84,22 @@ def rle s
   end
 end
 ```
+
+### 転倒数
+https://scrapbox.io/pocala-kyopro/%E8%BB%A2%E5%80%92%E6%95%B0
+数列で、
+>「左にあるくせに大きいやんけ！(ソートされてるなら左に小さいのが来るはずなのに…)」
+ってなってる組の数。バブルソートの交換回数にもなる。
+ {1,2,3,4,5}の転倒数は0
+ {1,2,3,5,4}の転倒数は1
+ {5,1,2,3,4}の転倒数は4
+
+ ```
+ten = 0
+bits = Array.new(MAX_A_i+1,0)
+
+a.each_with_index do |aa, i|
+  ten += i - bits[0..aa].sum
+  bits[aa] += 1
+end
+```
