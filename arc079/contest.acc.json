@@ -1,0 +1,49 @@
+{
+  "contest": {
+    "id": "arc079",
+    "title": "AtCoder Regular Contest 079",
+    "url": "https://atcoder.jp/contests/arc079"
+  },
+  "tasks": [
+    {
+      "id": "arc079_a",
+      "label": "C",
+      "title": "Cat Snuke and a Voyage",
+      "url": "https://atcoder.jp/contests/arc079/tasks/arc079_a",
+      "directory": {
+        "path": "c",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "arc079_b",
+      "label": "D",
+      "title": "Decrease (Contestant ver.)",
+      "url": "https://atcoder.jp/contests/arc079/tasks/arc079_b",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "arc079_c",
+      "label": "E",
+      "title": "Decrease (Judge ver.)",
+      "url": "https://atcoder.jp/contests/arc079/tasks/arc079_c",
+      "directory": {
+        "path": "e",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "arc079_d",
+      "label": "F",
+      "title": "Namori Grundy",
+      "url": "https://atcoder.jp/contests/arc079/tasks/arc079_d",
+      "directory": {
+        "path": "f",
+        "testdir": "tests"
+      }
+    }
+  ]
+}
