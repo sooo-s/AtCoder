@@ -15,8 +15,23 @@ q.times{ array << gets.to_i } // [1, 2, 3]
 #### 初期値nilの配列
 `Array.new(3) # => [nil, nil, nil]`
 
+#### nilを取り除く
+`[1,2,3,nil,4].compact # => [1,2,3,4]
+
 #### 文字列
 `%w(Ruby Perl Python) # =>["Ruby", "Perl", "Python"]`
+
+#### Array:集合
+```
+arr1 & arr2 # 積
+arr1 | arr2 # 和
+```
+
+#### 同じ要素をカウント
+```
+arr = ['a', 'b', 'c', 'a', 'a', 'b']
+arr.tally # => {'a' => 3, 'b' => 2, 'c' => 1}
+```
 
 ### string join
 文字列操作は計算量が悪い
@@ -27,6 +42,7 @@ string_queue.push 'PPP'
 string_queue.unshift 'UUU'
 string.queue.join // 'UUUaaaPPP'
 ```
+
 
 ### Range
 ```
