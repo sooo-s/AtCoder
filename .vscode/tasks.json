@@ -1,0 +1,63 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "AtCoder test all case",
+            "type": "shell",
+            "command": "oj t -d tests -c 'ruby main.rb'",
+            "options": {
+                "cwd": "${fileDirname}"
+            }
+        },
+        {
+            "label": "AtCoder test 1st case",
+            "type": "shell",
+            "command": "ruby main.rb < tests/sample-1.in",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "AtCoder test another case",
+            "type": "shell",
+            "command": "ruby main.rb < tests/sample-${input:caseId}.in",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+        },
+        {
+            "label": "AtCoder submit answer",
+            "type": "shell",
+            "command": "source ../bin/submit ${input:taskId} ${input:confirm}",
+            "options": {
+                "cwd": "${fileDirname}/.."
+            },
+        }
+    ],
+    "inputs": [
+        {
+            "id": "caseId",
+            "default": "2",
+            "type": "promptString",
+            "description": "input case number"
+        },
+        {
+            "id": "taskId",
+            "default": "a",
+            "type": "promptString",
+            "description": "input task id"
+        },
+        {
+            "id": "confirm",
+            "default": "abca",
+            "type": "promptString",
+            "description": "input confirm text"
+        }
+    ]
+}
