@@ -8,6 +8,11 @@ n,m = gets.split.map(&:to_i) // n = 10, m = 20
 q.times{ array << gets.to_i } // [1, 2, 3]
 ```
 
+### Float
+#### 誤差が出るとき
+1. 整数の計算に変換する
+2. `0.3.rationalize`  # => (3/10) 有理数(Rational)オブジェクトを使う
+
 ### Array
 #### sumがない -> sumが使えるようになった
 `array.inject(:+)` -> `array.sum`
