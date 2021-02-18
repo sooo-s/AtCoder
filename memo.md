@@ -97,7 +97,7 @@ left, rightを尺取虫のように動かして計算
 
 
 ### run length
-``
+```
 def rle s
   s.each_char.inject([]) do |memo, c|
      memo.last && c == memo.last.last ? memo.last[0] += 1 : memo << [1, c]
@@ -115,12 +115,23 @@ https://scrapbox.io/pocala-kyopro/%E8%BB%A2%E5%80%92%E6%95%B0
  {1,2,3,5,4}の転倒数は1
  {5,1,2,3,4}の転倒数は4
 
- ```
+```
 ten = 0
 bits = Array.new(MAX_A_i+1,0)
 
 a.each_with_index do |aa, i|
   ten += i - bits[0..aa].sum
   bits[aa] += 1
+end
+```
+
+### 約数列挙
+```
+def divisors m
+    res = []
+    (1..Math.sqrt(m)).each do |x|
+        res << x << m / x if m % x == 0
+    end
+    return res.sort
 end
 ```
