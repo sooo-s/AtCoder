@@ -58,6 +58,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  rubocop
   solargraph
 
 BUNDLED WITH
