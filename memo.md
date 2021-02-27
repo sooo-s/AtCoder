@@ -1,11 +1,11 @@
 ## Ruby
 ### input
 ```
-n = gets.to_i // 10
-s = gets.chomp.to_s //  "string"
-s = gets.chomp.chars // ["s", "t", "r", "i", "n", "g"]
-n,m = gets.split.map(&:to_i) // n = 10, m = 20
-q.times{ array << gets.to_i } // [1, 2, 3]
+n = gets.to_i # 10
+s = gets.chomp.to_s #  "string"
+s = gets.chomp.chars # ["s", "t", "r", "i", "n", "g"]
+n,m = gets.split.map(&:to_i) # n = 10, m = 20
+q.times{ array << gets.to_i } # [1, 2, 3]
 ```
 
 ### Float
@@ -38,7 +38,17 @@ arr = ['a', 'b', 'c', 'a', 'a', 'b']
 arr.tally # => {'a' => 3, 'b' => 2, 'c' => 1}
 ```
 
-### string join
+### Hash
+#### 初期値を設定する
+```
+h = Hash.new(0)
+# or
+tally = [1,2,3,3].tally # {1 => 1, 2 => 1, 3 => 2}
+tally.dafault = 0       # tally[100] = 0
+```
+
+### String
+#### join
 文字列操作は計算量が悪い
 queueに入れて最後にjoin
 ```
