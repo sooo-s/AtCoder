@@ -5,7 +5,7 @@ n = gets.to_i # 10
 s = gets.chomp.to_s #  "string"
 s = gets.chomp.chars # ["s", "t", "r", "i", "n", "g"]
 n,m = gets.split.map(&:to_i) # n = 10, m = 20
-q.times{ array << gets.to_i } # [1, 2, 3]
+n.times{ array << gets.chomp.split.map(&:to_i) } # [[1, 2], [3, 4], [5, 6]]
 ```
 
 ### Float
@@ -76,16 +76,15 @@ string.queue.join // 'UUUaaaPPP'
 ### 動的計画法
 ### 累積和
 ```
+array = [1, 3, 5, 10]
 $cum_sum = [0]
-(1..n+1).each do |i|
-  $cum_sum << $cum_sum[-1] + i
+array.each do |v|
+  $cum_sum << $cum_sum[-1] + v
 end
+# $cum_sum = [0, 1, 4, 9, 19]
 
-def calc(k)
-  min =  $cum_sum[k] - $cum_sum[0]
-  max = $cum_sum[-1] - $cum_sum[-1 - k]
-  return max - min + 1
-end
+# array 1番目から3番目の合計
+kukan_wa = $cum_sum[4] - $cum_sum[1] # 19 - 1 = 18 = 3 + 5 + 10
 ```
 ### 幅優先探索 BFS
 ABC168 D
