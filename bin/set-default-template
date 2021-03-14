@@ -1,0 +1,2 @@
+cp -rf ./bin/ruby-template `npx acc config-dir`
+npx acc config default-template ruby-template

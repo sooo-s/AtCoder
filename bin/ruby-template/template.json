@@ -1,0 +1,7 @@
+{
+  "task": {
+    "program": ["main.rb"],
+    "submit": "main.rb"
+  }
+}
+
