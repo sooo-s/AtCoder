@@ -157,6 +157,6 @@ def divisors m
     (1..Math.sqrt(m)).each do |x|
         res << x << m / x if m % x == 0
     end
-    return res.sort
+    return res.sort.uniq
 end
 ```
