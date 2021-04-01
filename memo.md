@@ -73,7 +73,6 @@ string_queue.unshift 'UUU'
 string.queue.join // 'UUUaaaPPP'
 ```
 
-
 ### Range
 ```
 (1..10)  // 1から10
@@ -82,6 +81,13 @@ string.queue.join // 'UUUaaaPPP'
 (0..10).step(3).to_a # [0, 3, 6, 9] 範囲内の要素をstepおきに繰り返す/等差数列
 ```
 
+### Complex: 複素数
+平面の点やベクトル操作が簡単にできる
+```
+a = Complex(2 ,1) # 2 +1i
+b = Complex.polar(1, Math::PI / 2) # 0.0+1i 長さ1, 偏角90度のベクトル
+a * b # -1.0+2.0i 90度回転
+```
 
 ## algorithm
 ### 全探索
