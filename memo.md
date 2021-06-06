@@ -1,15 +1,15 @@
 ## Ruby
 ### input
-```
+```rb
 n = gets.to_i # 10
 s = gets.chomp.to_s #  "string"
 s = gets.chomp.chars # ["s", "t", "r", "i", "n", "g"]
-n,m = gets.split.map(&:to_i) # n = 10, m = 20
+n, m = gets.chomp.split.map(&:to_i) # n = 10, m = 20
 n.times{ array << gets.chomp.split.map(&:to_i) } # [[1, 2], [3, 4], [5, 6]]
 ```
 
 ### Integer
-```
+```rb
 3 ** 4 # 累乗 3^4 => 81
 10 / 3 # 商 => 3
 10 % 3 # 余り => 1
@@ -17,10 +17,16 @@ n.times{ array << gets.chomp.split.map(&:to_i) } # [[1, 2], [3, 4], [5, 6]]
 10.divmod(3) # => [3, 1]
 ```
 #### 累乗
-```
+```rb
 3 ** 3 # => 27
 3.pow(3) # => 27
 3.pow(3, 8) # => (3 ** 3) % 8 => 3 を巨大な値を生成せずに計算
+```
+
+#### 階乗
+```rb
+# n! = Math.gamma(n + 1)
+Math.gamma(5 + 1) # => 120
 ```
 
 ### Float
@@ -42,20 +48,20 @@ n.times{ array << gets.chomp.split.map(&:to_i) } # [[1, 2], [3, 4], [5, 6]]
 `%w(Ruby Perl Python) # =>["Ruby", "Perl", "Python"]`
 
 #### Array:集合
-```
+```rb
 arr1 & arr2 # 積
 arr1 | arr2 # 和
 ```
 
 #### 同じ要素をカウント
-```
+```rb
 arr = ['a', 'b', 'c', 'a', 'a', 'b']
 arr.tally # => {'a' => 3, 'b' => 2, 'c' => 1}
 ```
 
 ### Hash
 #### 初期値を設定する
-```
+```rb
 h = Hash.new(0)
 # or
 tally = [1,2,3,3].tally # {1 => 1, 2 => 1, 3 => 2}
@@ -66,7 +72,7 @@ tally.dafault = 0       # tally[100] = 0
 #### join
 文字列操作は計算量が悪い
 queueに入れて最後にjoin
-```
+```rb
 string_queue = ['aaa']
 string_queue.push 'PPP'
 string_queue.unshift 'UUU'
@@ -74,7 +80,7 @@ string.queue.join // 'UUUaaaPPP'
 ```
 
 ### Range
-```
+```rb
 (1..10)  // 1から10
 (1...10)  // 1から9
 (1..10).to_a // [1, 2, ..., 10]
@@ -83,7 +89,7 @@ string.queue.join // 'UUUaaaPPP'
 
 ### Complex: 複素数
 平面の点やベクトル操作が簡単にできる
-```
+```rb
 a = Complex(2 ,1) # 2 +1i
 b = Complex.polar(1, Math::PI / 2) # 0.0+1i 長さ1, 偏角90度のベクトル
 a * b # -1.0+2.0i 90度回転
@@ -97,7 +103,7 @@ a * b # -1.0+2.0i 90度回転
 後のことは考えない
 ### 動的計画法
 ### 累積和
-```
+```rb
 array = [1, 3, 5, 10]
 $cum_sum = [0]
 array.each do |v|
@@ -128,7 +134,7 @@ left, rightを尺取虫のように動かして計算
 
 
 ### run length
-```
+```rb
 def rle s
   s.each_char.inject([]) do |memo, c|
      memo.last && c == memo.last.last ? memo.last[0] += 1 : memo << [1, c]
@@ -146,7 +152,7 @@ https://scrapbox.io/pocala-kyopro/%E8%BB%A2%E5%80%92%E6%95%B0
  {1,2,3,5,4}の転倒数は1
  {5,1,2,3,4}の転倒数は4
 
-```
+```rb
 ten = 0
 bits = Array.new(MAX_A_i+1,0)
 
@@ -157,7 +163,7 @@ end
 ```
 
 ### 約数列挙
-```
+```rb
 def divisors m
     res = []
     (1..Math.sqrt(m)).each do |x|
@@ -166,3 +172,6 @@ def divisors m
     return res.sort.uniq
 end
 ```
+
+## TODO
+### Union-Find
