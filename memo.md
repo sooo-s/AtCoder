@@ -1,7 +1,7 @@
 ## Ruby
 ### util
 ```rb
-MOD = 1000000007 # divide by a prime number
+MOD = 1_000_000_007 # => 10 ** 9 + 7 # divide by a prime number 
 ```
 ### input
 ```rb
