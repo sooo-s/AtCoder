@@ -144,13 +144,31 @@ end
 # array 1番目から3番目の合計
 kukan_wa = $cum_sum[4] - $cum_sum[1] # 19 - 1 = 18 = 3 + 5 + 10
 ```
-### 幅優先探索 BFS
-ABC168 D
+### 幅優先探索 BFS O(N + M)
+`グラフの頂点数を N、辺数を Mとして`
+ABC168 D, ABC204 C
+全探索アルゴリズムの一種、最短経路を求めるのに使う
 
-初期値をqueueに入れる
-queueから一つ取り出し探索する
-探索したら結果をqueueに入れる
-繰り返してqueueが空になったら探索終わり
+```rb
+# 例
+g = Array.new(N + 1) { [] } # 探索するグラフ
+# g[1] = [2,3] ...
+
+visited = Array.new(N + 1) # ノードを探索したかどうか
+queue = [1] # 初期値をqueueに入れてスタート
+visited[1] = true # 初期値なので探索済み
+# ここをnumberにして最短経路を求めたりする
+
+until queue.empty? # queueがなくなったら探索完了
+  v = queue.shift # queueから一つ取り出す
+  g[v].each do |to| # このノードから行ける探索先ごとに
+    unless visited[to] # 探索先が既に探索済みならスキップ
+      queue << to # そうでなければ後で探索するのでqueueに入れる
+      visited[to] = true # このノードは探索し終わったので訪問済みにする
+    end
+  end
+end
+```
 
 ### しゃくとり法 O(n^2) -> O(n)
 ABC032 C, ABC038 C, ABC098 D, ARC022 B
