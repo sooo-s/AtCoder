@@ -221,5 +221,19 @@ def divisors m
 end
 ```
 
+### 座標圧縮
+座標圧縮は、座標の情報から、位置関係や大小関係だけ抽出するテクニック
+
+数列 X の座標圧縮
+数列 X をソートした結果を vals とする
+vals の重複した値を削除する
+X のそれぞれの要素について、vals の中の何番目に出現するかを二分探索などで調べる
+```rb
+A = [1, 4, 6, 3, 4]
+vals = A.sort.uniq
+AA = A.map { |a| vals.bsearch_index { |x| x >= a } }
+# AA => [0, 2, 3, 1, 2]
+```
+
 ## TODO
 ### Union-Find
