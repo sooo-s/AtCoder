@@ -1,5 +1,10 @@
-n = gets.to_i # 10
-s = gets.chomp.to_s #  "string"
-s = gets.chomp.chars # ["s", "t", "r", "i", "n", "g"]
-n, m = gets.chomp.split.map(&:to_i) # n = 10, m = 20
-n.times { array << gets.split.map(&:to_i) } # [[1, 2], [3, 4], [5, 6]]
+N = gets.to_i # 10
+
+max = Math.log2(N).floor
+
+max.downto(0) do |k|
+  if 2**k <= N
+    puts k
+    exit
+  end
+end
