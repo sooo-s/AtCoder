@@ -237,3 +237,21 @@ AA = A.map { |a| vals.bsearch_index { |x| x >= a } }
 
 ## TODO
 ### Union-Find
+
+## JavaScript
+### BigInt
+http://tatamo.81.la/blog/2018/02/09/competitive-programming-using-js-and-ts-02/
+> 整数値としての精度が保証される最大値は2^53-1までです。 これはおよそ9.0*10^15程度なので、入力中に10^18ぐらいの数値が与えられるとその時点で詰みです。
+
+```js
+const n = BigInt(123) // 123n
+console.log(n.toString()) // 123
+const minus = n - 10n // 113n
+```
+
+### Array
+#### uniq
+```js
+const a = [1,2,3,4,5,1]
+const uniq = [...new Set(a)]  // [1,2,3,4,5]
+```
